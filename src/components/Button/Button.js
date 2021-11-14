@@ -13,7 +13,6 @@ const Button = ({ className, type, children, onClick }) => {
 Button.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.object), PropTypes.element, PropTypes.string]),
   onClick: PropTypes.func,
 };
 

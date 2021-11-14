@@ -36,8 +36,8 @@ const mapStateToProps = state => ({ value: state.counter.value, step: state.coun
 // mapStateToProps - возвращаемый объект распыляется пропсами на компонент
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: () => dispatch(actions.increment()),
-  onDecrement: () => dispatch(actions.decrement(1)),
+  onIncrement: step => dispatch(actions.increment(step)),
+  onDecrement: step => dispatch(actions.decrement(step)),
 });
 // mapDispatchToProps метод который доставляет наши экшены в хранилище
 // возвращаемый объект так же распыляется пропсами для компонента, но используется, что бы привязать действие
